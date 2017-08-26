@@ -5,6 +5,17 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000734_added_entity_Score.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000735_added_entity_Scorestatus.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000736_added_entity_Scorerecordtype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000737_added_entity_Scoreclass.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000738_added_entity_Scorecategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000739_added_entity_Scoretype.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20170826000734_added_entity_constraints_Score.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000736_added_entity_constraints_Scorerecordtype.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000737_added_entity_constraints_Scoreclass.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000738_added_entity_constraints_Scorecategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170826000739_added_entity_constraints_Scoretype.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

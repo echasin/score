@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Scoreclass.
+    -->
+    <changeSet id="20170826000737-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="scorestatus_id"
+                                 baseTableName="scoreclass"
+                                 constraintName="fk_scoreclass_scorestatus_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scorestatus"/>
+
+        <addForeignKeyConstraint baseColumnNames="scorerecordtype_id"
+                                 baseTableName="scoreclass"
+                                 constraintName="fk_scoreclass_scorerecordtype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scorerecordtype"/>
+
+    </changeSet>
+</databaseChangeLog>

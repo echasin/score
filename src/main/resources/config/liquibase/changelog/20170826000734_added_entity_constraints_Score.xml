@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Score.
+    -->
+    <changeSet id="20170826000734-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="scorestatus_id"
+                                 baseTableName="score"
+                                 constraintName="fk_score_scorestatus_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scorestatus"/>
+
+        <addForeignKeyConstraint baseColumnNames="scorerecordtype_id"
+                                 baseTableName="score"
+                                 constraintName="fk_score_scorerecordtype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scorerecordtype"/>
+
+        <addForeignKeyConstraint baseColumnNames="scoreclass_id"
+                                 baseTableName="score"
+                                 constraintName="fk_score_scoreclass_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scoreclass"/>
+
+        <addForeignKeyConstraint baseColumnNames="scorecategory_id"
+                                 baseTableName="score"
+                                 constraintName="fk_score_scorecategory_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scorecategory"/>
+
+        <addForeignKeyConstraint baseColumnNames="scoretype_id"
+                                 baseTableName="score"
+                                 constraintName="fk_score_scoretype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="scoretype"/>
+
+    </changeSet>
+</databaseChangeLog>
