@@ -18,6 +18,8 @@
     <include file="config/liquibase/changelog/20170826000738_added_entity_constraints_Scorecategory.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20170826000739_added_entity_constraints_Scoretype.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
-	<include relativeToChangelogFile="false" file="classpath:config/liquibase/load_score_dev.xml"/>
-	
+	<include relativeToChangelogFile="false" file="classpath:config/liquibase/create_tablefunc.xml"/>
+    <include relativeToChangelogFile="false" file="classpath:config/liquibase/create_colpivot.xml"/>
+    <include relativeToChangelogFile="false" file="classpath:config/liquibase/load_score_dev.xml"/>
+    
 	</databaseChangeLog>
