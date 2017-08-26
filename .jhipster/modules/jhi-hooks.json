@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Angular Datatables generator",
+        "npmPackageName": "generator-jhipster-angular-datatables",
+        "description": "A JHipster module to generate Angular Datatables",
+        "hookFor": "entity",
+        "hookType": "post",
+        "generatorCallback": "jhipster-angular-datatables:app"
+    }
+]

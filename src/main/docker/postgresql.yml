@@ -1,0 +1,11 @@
+version: '2'
+services:
+    score-postgresql:
+        image: postgres:9.6.2
+        # volumes:
+        #     - ~/volumes/jhipster/score/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=score
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

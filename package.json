@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@types/datatables.net": "^1.10.6",
+    "@types/jquery": "^3.2.12",
+    "angular-datatables": "^4.2.0",
+    "generator-jhipster": "4.6.2",
+    "install": "^0.10.1"
+  },
+  "dependencies": {
+    "angular-datatables": "^4.2.0",
+    "datatables.net": "^1.10.15",
+    "datatables.net-dt": "^1.10.15"
+  }
+}

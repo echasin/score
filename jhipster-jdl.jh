@@ -1,0 +1,112 @@
+entity Score {
+	scorevalue String required,
+	comment String,
+    lastmodifiedby String required,
+    lastmodifieddatetime ZonedDateTime required
+    domain String required
+}
+
+entity Scorestatus {
+	name String required maxlength(100),
+    nameshort String required maxlength(25),
+    description String maxlength (255),
+    lastmodifiedby String required,
+    lastmodifieddatetime ZonedDateTime required,
+    domain String required
+}
+
+entity Scorerecordtype {
+	name String required maxlength(100),
+    nameshort String required maxlength(25),
+    description String maxlength (255),
+    lastmodifiedby String required,
+    lastmodifieddatetime ZonedDateTime required,
+    domain String required
+}
+entity Scoreclass {
+	name String required maxlength(100),
+    nameshort String required maxlength(25),
+    description String maxlength (255),
+    lastmodifiedby String required,
+    lastmodifieddatetime ZonedDateTime required,
+    domain String required
+}
+
+entity Scorecategory {
+	name String required maxlength(100),
+    nameshort String required maxlength(25),
+    description String maxlength (255),
+    lastmodifiedby String required,
+    lastmodifieddatetime ZonedDateTime required,
+    domain String required
+}
+
+entity Scoretype {
+	name String required maxlength(100),
+    nameshort String required maxlength(25),
+    description String maxlength (255),
+    lastmodifiedby String required,
+    lastmodifieddatetime ZonedDateTime required,
+    domain String required
+}
+
+
+relationship ManyToOne {
+	Score{scorestatus(name)} to Scorestatus
+}
+
+relationship ManyToOne {
+	Scorerecordtype{scorestatus(name)} to Scorestatus
+}
+
+relationship ManyToOne {
+	Scoreclass{scorestatus(name)} to Scorestatus
+}
+
+relationship ManyToOne {
+	Scorecategory{scorestatus(name)} to Scorestatus
+}
+
+relationship ManyToOne {
+	Scorecategory{scorestatus(name)} to Scorestatus
+}
+
+relationship ManyToOne {
+	Score{scorerecordtype(name)} to Scorerecordtype
+}
+
+relationship ManyToOne {
+	Score{scoreclass(name)} to Scoreclass
+}
+relationship ManyToOne {
+	Score{scorecategory(name)} to Scorecategory
+}
+
+relationship ManyToOne {
+	Score{scoretype(name)} to Scoretype
+}
+
+relationship ManyToOne {
+	Scoreclass{scorerecordtype(name)} to Scorerecordtype
+}
+
+relationship ManyToOne {
+	Scorecategory{scoreclass(name)} to Scoreclass
+}
+
+relationship ManyToOne {
+	Scoretype{scorecategory(name)} to Scorecategory
+}
+
+
+
+paginate Score with pagination
+paginate Scorestatus with pagination
+paginate Scorerecordtype with pagination
+paginate Scoreclass with pagination
+paginate Scorecategory with pagination
+paginate Scoretype with pagination
+
+microservice * with score
+search * with elasticsearch
+
