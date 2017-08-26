@@ -1,0 +1,3 @@
+id; name; nameshort; description; lastmodifiedby; lastmodifieddatetime;domain; scorecategory_id
+1201;"Route Risk Type One";"RR TYPE1";"Route Risk Type One";"echasin";"2017-08-25 12:00:00";"DEV";1151
+1202;"Route Risk Type Two";"RR TYPE2";"Route Risk Type Two";"echasin";"2017-08-25 12:00:00";"DEV";1151

@@ -1,0 +1,2 @@
+ id; name; nameshort; description; lastmodifiedby; lastmodifieddatetime;domain; scorestatus_id
+ 1051;"Risk Score";"Risk Score";"Risk Score is score that allocates Risk to an object.";"echasin";"2017-08-25 12:00:00";"DEV";1001
