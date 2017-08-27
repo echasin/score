@@ -16,10 +16,10 @@
 	<!-- Added the entity data. -->
 
 
-	<changeSet id="create_colpivot" author="echasin">
+	<changeSet id="ct_score_scoreclass_routerisk_dev" author="echasin">
 		<sqlFile 
 		encoding="utf8" 
-		path="./sql/colpivot.sql" 
+		path="./sql/ct_score_scoreclass_routerisk_dev.sql" 
 		relativeToChangelogFile="true"
 		splitStatements="false" 
 		stripComments="false"

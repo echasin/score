@@ -21,5 +21,6 @@
 	<include relativeToChangelogFile="false" file="classpath:config/liquibase/create_tablefunc.xml"/>
     <include relativeToChangelogFile="false" file="classpath:config/liquibase/create_colpivot.xml"/>
     <include relativeToChangelogFile="false" file="classpath:config/liquibase/load_score_dev.xml"/>
+    <include relativeToChangelogFile="false" file="classpath:config/liquibase/create_ct_score_scoreclass_routerisk_dev.xml"/>
     
 	</databaseChangeLog>
