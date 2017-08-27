@@ -1,2 +1,3 @@
  id; name; nameshort; description; lastmodifiedby; lastmodifieddatetime; domain; scorestatus_id; scoreclass_id
  1151;"Route Risk Category One";"RR CAT1";"Route Risk Category One";"echasin";"2017-08-25 12:00:00";"DEV";1001;1101
+ 1152;"Route Risk Category TWO";"RR CAT2";"Route Risk Category Two";"echasin";"2017-08-25 12:00:00";"DEV";1001;1101

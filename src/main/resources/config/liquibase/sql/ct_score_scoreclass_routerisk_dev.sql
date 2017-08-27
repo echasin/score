@@ -14,14 +14,13 @@ and scl.name = 'Route Risk'
 
 
 --DROP VIEW v_score_scoreclass_routerisk_dev;
-CREATE or REPLACE VIEW v_score_scoreclass_routerisk_dev
+CREATE or REPLACE VIEW v_score
 AS
-SELECT scl.nameshort as SCORECLASS,  sca.nameshort as SCORECATEGORY, sty.nameshort as SCORETYPE, s.scorevalue as SCOREVALUE
+SELECT s.id as SCOREID, scl.nameshort as SCORECLASS,  sca.nameshort as SCORECATEGORY, sty.nameshort as SCORETYPE, s.scorevalue as SCOREVALUE
 FROM score s, scoreclass scl, scorecategory sca, scoretype sty
 WHERE s.scoreclass_id = scl.id
 AND s.scorecategory_id = sca.id
 AND s.scoretype_id = sty.id
-AND scl.name = 'Route Risk (DEV)'
 ;
 
 /*
@@ -34,19 +33,17 @@ PRINT @scoreclasscolumns;
 
 --5. Create crosstab view for Scoreclass = "Route Risk"
 */
-DROP VIEW ct_score_scoreclass_routerisk_dev;
+--DROP VIEW ct_score_scoreclass_routerisk_dev;
 CREATE or REPLACE VIEW ct_score_scoreclass_routerisk_dev
 AS
-SELECT *
-FROM crosstab(
-  'select SCORECATEGORY, SCORETYPE, SCOREVALUE
-   from v_score_scoreclass_routerisk_dev
-   where SCORETYPE = ''RRTYPE1'' or SCORETYPE = ''RRTYPE2'' or SCORETYPE = ''RRTYPE3''
-   order by 1,2')
-AS ct(row_name varchar, RRTYPE1 varchar, RRTYPE2 varchar, RRTYPE3 varchar );
-
+SELECT * From crosstab(
+'SELECT SCOREID,SCORECATEGORY, SCORETYPE, SCOREVALUE
+   from v_score
+   ORDER BY SCOREID,SCORETYPE'
+   ,$$VALUES ('RR TYPE1'),('RR TYPE2')$$)
+AS (SCOREID bigint,SCORECATEGORY varchar, RRTYPE1 varchar, RRTYPE2 varchar);
 
 --6.
+SELECT * FROM  v_score;
 SELECT * FROM  ct_score_scoreclass_routerisk_dev;
-SELECT * FROM  v_score_scoreclass_routerisk_dev;
-*/
+
