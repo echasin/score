@@ -28,7 +28,7 @@
       "gatling",
       "cucumber"
     ],
-    "jhiPrefix": "innvo",
+    "jhiPrefix": "jhi",
     "skipClient": true,
     "skipUserManagement": true,
     "nativeLanguage": "en",
